@@ -483,9 +483,9 @@ func (g *Game) Update(rootGame *BigGame) error {
 		// }
 	}
 
-	if inpututil.IsKeyJustPressed(ebiten.KeyF5) {
-		fillInMapWithLevels(g)
-	}
+	// if inpututil.IsKeyJustPressed(ebiten.KeyF5) {
+	// 	fillInMapWithLevels(g)
+	// }
 
 	g.timeRemaining -= 1.0 / 24
 	if g.timeRemaining <= 0 || g.health <= 0 {
@@ -497,9 +497,9 @@ func (g *Game) Update(rootGame *BigGame) error {
 		sePlayer.Play()
 	}
 
-	if inpututil.IsKeyJustPressed(ebiten.KeyF6) {
-		g.specialMenu = GameOver
-	}
+	// if inpututil.IsKeyJustPressed(ebiten.KeyF6) {
+	// 	g.specialMenu = GameOver
+	// }
 
 	if g.player.GetLerpProgress(g) < 1 && g.t%20 == 0 {
 		sePlayer := rootGame.audioContext.NewPlayerFromBytes(footstepSounds[rand.IntN(len(footstepSounds))])
