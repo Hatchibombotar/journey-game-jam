@@ -661,7 +661,9 @@ func (big *BigGame) Draw(screen *ebiten.Image) {
 
 func main() {
 	ebiten.SetWindowSize(640, 480)
-	ebiten.SetWindowTitle("Hello, World!")
+	ebiten.SetWindowTitle("Jouney to the Center of the Library")
+	ebiten.SetWindowDecorated(true)
+	ebiten.SetWindowIcon([]image.Image{spritesheet.SubImage(image.Rect(0, 0, 16, 16))})
 
 	root := &BigGame{
 		audioContext: audio.NewContext(SAMPLE_RATE),

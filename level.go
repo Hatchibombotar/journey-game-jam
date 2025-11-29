@@ -188,7 +188,7 @@ func generateLevelForMapPosition(m *Map, x, y int) *Level {
 							sePlayer.Play()
 						},
 					})
-				} else if lootType < 0.8 {
+				} else if lootType < 0.85 {
 					level.Loot = append(level.Loot, Loot{
 						image:    healthPowerup,
 						position: Vector{float64(lootX), float64(lootY)},
